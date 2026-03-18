@@ -1,0 +1,8 @@
+
+cd /usr/src
+wget https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-16.30.0.tar.gz
+tar -xzvf asterisk-16.30.0.tar.gz
+cd asterisk-16.30.0
+./configure --with-jansson-bundled
+make menuselect
+make && sudo make install && sudo make config && sudo make samples
